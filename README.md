@@ -1,14 +1,22 @@
 # 🍽️ Frontend Restaurant Website
 
-Welcome to the **Frontend Restaurant Website** project — a modern, responsive, and visually appealing restaurant landing page designed to showcase food, services, and restaurant branding. 
+Welcome to the **Frontend Restaurant Website** project — a modern, responsive, and visually appealing restaurant landing page designed to showcase food, services, and restaurant branding.
 
 This project focuses on delivering an elegant user experience with beautiful layouts, engaging animations, and a fully responsive design.
 
 ---
 
-## 🖼️ Preview
+## 🖼️ Previews
 
-![Restaurant Website Preview](./images/preview.png)
+Here is a glimpse of the website's elegant design across different sections:
+
+### 🏠 Hero Section
+
+![Hero Section Preview](./images/preview.png)
+
+### 👨‍🍳 About Section
+
+![About Section Preview](./images/preview-2.png)
 
 ---
 
@@ -85,13 +93,13 @@ Follow these simple steps to view the project locally:
 1. **Clone the Repository:**
 
 ```bash
-   git clone https://github.com/iqbolshoh/frontend-restaurant.git
+   git clone https://github.com/iqbolshoh/frontend-restaurant-website.git
 ```
 
 2. **Navigate to the Directory:**
 
 ```bash
-   cd frontend-restaurant
+   cd frontend-restaurant-website
 ```
 
 3. **Run the Project:**
