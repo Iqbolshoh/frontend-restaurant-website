@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Restaurant</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f97316',
+                        darkBg: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-darkBg dark:text-gray-200 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-md transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary"><i
+                            class="fa-solid fa-utensils mr-2"></i>Gourmet</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="hover:text-primary transition">Home</a>
+                    <a href="#about" class="hover:text-primary transition">About</a>
+                    <a href="#menu" class="hover:text-primary transition">Menu</a>
+                    <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+                    <a href="#reservation" class="hover:text-primary transition">Reservation</a>
+
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="themeToggleBtn"
+                        class="text-gray-500 dark:text-gray-400 hover:text-primary focus:outline-none">
+                        <i id="themeIcon" class="fa-solid fa-moon text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="relative pt-20 pb-32 flex content-center items-center justify-center min-h-screen">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover"
+            style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+            <span class="w-full h-full absolute opacity-70 bg-black"></span>
+        </div>
+        <div class="container relative mx-auto px-4 fade-in">
+            <div class="items-center flex flex-wrap text-center justify-center text-white">
+                <div class="w-full lg:w-8/12 px-4">
+                    <h1 class="text-5xl font-bold md:text-6xl mb-6">Experience Fine Dining</h1>
+                    <p class="mt-4 text-lg mb-10 text-gray-200">
+                        Discover the perfect blend of modern culinary artistry and traditional flavors in an elegant
+                        atmosphere.
+                    </p>
+                    <a href="#menu"
+                        class="bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-600 transition duration-300 mr-4">View
+                        Menu</a>
+                    <a href="#reservation"
+                        class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-black transition duration-300">Book
+                        a Table</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Chef cooking" class="rounded-lg shadow-xl hover-scale">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4 text-primary">Our Story</h2>
+                    <h3 class="text-2xl font-semibold mb-4">A Passion for Culinary Excellence</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        Founded with a mission to bring world-class dining to the heart of the city, we source only the
+                        freshest ingredients to craft dishes that delight the senses. Our executive chef brings decades
+                        of experience from top Michelin-starred restaurants.
+                    </p>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-8">
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Premium organic ingredients</li>
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Award-winning executive chefs</li>
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Unforgettable dining atmosphere</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-2">Our Menu</h2>
+                <p class="text-gray-600 dark:text-gray-400">Discover our special dishes</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Dish" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Healthy Salad</h3>
+                            <span class="text-primary font-bold text-xl">$14.00</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Fresh organic greens with house special
+                            vinaigrette.</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Dish" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Margherita Pizza</h3>
+                            <span class="text-primary font-bold text-xl">$18.00</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Classic Italian pizza with fresh mozzarella
+                            and basil.</p>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover-scale">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Dish" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">Grilled Steak</h3>
+                            <span class="text-primary font-bold text-xl">$32.00</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Premium cut steak grilled to perfection with
+                            sides.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-xl p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-primary mb-2">Book a Table</h2>
+                    <p class="text-gray-600 dark:text-gray-400">Reserve your spot for an unforgettable experience</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Your Name</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary outline-none"
+                                placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Phone Number</label>
+                            <input type="tel"
+                                class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary outline-none"
+                                placeholder="+1 234 567 8900">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Date</label>
+                            <input type="date"
+                                class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Time</label>
+                            <input type="time"
+                                class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Number of Guests</label>
+                        <select
+                            class="w-full px-4 py-3 rounded-lg border dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-primary outline-none">
+                            <option>1 Person</option>
+                            <option>2 People</option>
+                            <option>3 People</option>
+                            <option>4+ People</option>
+                        </select>
+                    </div>
+                    <button type="button"
+                        class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-lg transition duration-300">Confirm
+                        Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-4"><i class="fa-solid fa-utensils mr-2"></i>Gourmet
+                    </h3>
+                    <p class="text-gray-400 mb-4">Providing the best culinary experience with elegant atmosphere and
+                        premium services.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fa-brands fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fa-solid fa-location-dot mr-2"></i> 123 Restaurant Street, NY 10001</li>
+                        <li><i class="fa-solid fa-phone mr-2"></i> +1 234 567 8900</li>
+                        <li><i class="fa-solid fa-envelope mr-2"></i> info@gourmet.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Opening Hours</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Monday - Friday: 10:00 AM - 10:00 PM</li>
+                        <li>Saturday - Sunday: 09:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Gourmet Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // DOM Elements
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        // Check system preference on load
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlElement.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        // Toggle Theme Logic
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+
+            // Switch icon based on current theme
+            if (htmlElement.classList.contains('dark')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
+</body>
+
+</html>
