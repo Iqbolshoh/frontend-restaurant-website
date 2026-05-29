@@ -1,8 +1,14 @@
 # 🍽️ Frontend Restaurant Website
 
-Welcome to the **Frontend Restaurant Website** project — a modern, responsive, and visually appealing restaurant landing page designed to showcase food, services, and restaurant branding.
+Welcome to the **Frontend Restaurant Website** project — a modern, responsive, and visually appealing restaurant landing page designed to showcase food, services, and restaurant branding. 
 
 This project focuses on delivering an elegant user experience with beautiful layouts, engaging animations, and a fully responsive design.
+
+---
+
+## 🖼️ Preview
+
+![Restaurant Website Preview](./images/preview.png)
 
 ---
 
